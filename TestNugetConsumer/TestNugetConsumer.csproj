@@ -7,9 +7,9 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="Cloudy.CMS" Version="1.62.0" />
-	  <PackageReference Include="Cloudy.CMS.UI" Version="1.62.0" />
-	  <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="6.0.8" />
+	  <PackageReference Include="Cloudy.CMS" Version="1.62.1" />
+	  <PackageReference Include="Cloudy.CMS.UI" Version="1.62.1" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="6.0.9" />
 	</ItemGroup>
 
 </Project>
