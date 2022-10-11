@@ -1,9 +1,7 @@
 ﻿using Cloudy.CMS.ContentSupport;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
 
 namespace TestNugetConsumer.Models
 {
@@ -14,7 +12,6 @@ namespace TestNugetConsumer.Models
         public Guid Id { get; set; }
         public string Name { get; set; }
         [Display]
-        [RegularExpression(@"^[-_a-zA-Z0-9]*$", ErrorMessage = "Invalid URL")]
         public string UrlSegment { get; set; }
         [UIHint("textarea")]
         public string Description { get; set; }
