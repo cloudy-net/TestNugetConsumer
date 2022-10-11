@@ -2,8 +2,8 @@
 
 	<PropertyGroup>
 		<TargetFramework>net6.0</TargetFramework>
-		<UserSecretsId>1eebc780-ddb5-4ad2-8b94-3b8a1089619c</UserSecretsId>
 		<NoWarn>CS1998</NoWarn>
+		<UserSecretsId>302eedb0-3856-45d3-82d5-6041d6c1a180</UserSecretsId>
 	</PropertyGroup>
 
 	<ItemGroup>
