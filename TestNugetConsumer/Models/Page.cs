@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TestNugetConsumer.Models
 {
-    [Display(Description = "This is a sample class to show off most bells and whistles of the CMS toolkit.")]
+    [Display(Description = "This is a sample class to show off most bells and whistles of the CMS.")]
     public class Page : INameable, IRoutable
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
