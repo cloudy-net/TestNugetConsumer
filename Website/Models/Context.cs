@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace TestNugetConsumer.Models
+namespace Website.Models
 {
     public class Context : DbContext
     {

@@ -6,9 +6,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Cloudy.CMS.ContentSupport;
-using TestNugetConsumer.Models;
+using Website.Models;
 
-namespace TestNugetConsumer.Controllers
+namespace Website.Controllers
 {
     public class PageController : Controller
     {

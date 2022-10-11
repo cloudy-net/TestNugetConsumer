@@ -3,7 +3,7 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TestNugetConsumer.Models
+namespace Website.Models
 {
     [Display(Description = "This is a sample class to show off most bells and whistles of the CMS.")]
     public class Page : INameable, IRoutable
