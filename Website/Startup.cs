@@ -12,8 +12,6 @@ using System.IO;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddRazorPages().AddApplicationPart(typeof(CloudyUIAssemblyHandle).Assembly);
-builder.Services.AddMvc();
 builder.Services.AddCloudy(cloudy => cloudy
     .AddAdmin(admin => admin.Unprotect())
     .AddContext<Context>()
@@ -29,10 +27,7 @@ if (app.Environment.IsDevelopment())
     app.UseDeveloperExceptionPage();
 }
 
-app.UseStaticFiles(new StaticFileOptions
-{
-    OnPrepareResponse = ctx => ctx.Context.Response.Headers.Append("Cache-Control", $"no-cache")
-});
+app.UseStaticFiles(new StaticFileOptions().MustValidate());
 app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
