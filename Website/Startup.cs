@@ -28,16 +28,13 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseStaticFiles(new StaticFileOptions().MustValidate());
-app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
-app.UseEndpoints(endpoints =>
-{
-    endpoints.MapRazorPages();
-    endpoints.MapGet("/", async c => c.Response.Redirect("/Admin"));
-    endpoints.MapGet("/pages", async c => await c.Response.WriteAsJsonAsync(c.RequestServices.GetService<Context>().Pages));
-    endpoints.MapGet("/pages/{route:contentroute}", async c => await c.Response.WriteAsync($"Hello {c.GetContentFromContentRoute<Page>().Name}"));
-    endpoints.MapControllerRoute(null, "/controllertest/{route:contentroute}", new { controller = "Page", action = "Index" });
-});
+
+app.MapRazorPages();
+app.MapGet("/", async c => c.Response.Redirect("/Admin"));
+app.MapGet("/pages", async c => await c.Response.WriteAsJsonAsync(c.RequestServices.GetService<Context>().Pages));
+app.MapGet("/pages/{route:contentroute}", async c => await c.Response.WriteAsync($"Hello {c.GetContentFromContentRoute<Page>().Name}"));
+app.MapControllerRoute(null, "/controllertest/{route:contentroute}", new { controller = "Page", action = "Index" });
 
 app.Run();
