@@ -1,14 +1,13 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using Cloudy.CMS.Routing;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.AspNetCore.Routing;
-using Microsoft.Extensions.Hosting;
-using Website.Models;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Http;
-using Cloudy.CMS.Routing;
-using Cloudy.CMS.UI;
+using Microsoft.AspNetCore.Routing;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using System.IO;
+using Website.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
