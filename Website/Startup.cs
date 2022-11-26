@@ -13,6 +13,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddCloudy(cloudy => cloudy
     .AddAdmin(admin => admin.Unprotect())
+    .AddAzureMediaPicker()
     .AddContext<Context>()
 );
 builder.Services.AddDbContext<Context>(options => options

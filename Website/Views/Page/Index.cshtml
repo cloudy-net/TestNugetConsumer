@@ -1,10 +1,18 @@
-﻿@model Website.Models.Page
+﻿@using Cloudy.CMS.SingletonSupport;
+@using Website.Models;
+@model Website.Models.Page
+
+@inject ISingletonGetter SingletonGetter
+
+@{
+    var siteSettings = await SingletonGetter.Get<SiteSettings>();
+}
 
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
-    <title>@Model.Name</title>
+    <title>@siteSettings?.SiteName - @Model.Name</title>
 
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
